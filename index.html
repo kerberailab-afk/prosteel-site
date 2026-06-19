@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Steel Services | Structural Steel Fabricator &amp; Erector — Brooklyn, NYC</title>
+<meta name="description" content="Brooklyn-based structural steel fabricator and erector. Design, fabrication, and erection of structural and miscellaneous steel across all five NYC boroughs and the tri-state. AISC member. 60+ years combined experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== PRO STEEL THEME TOKENS ===== */
+:root{
+  --navy:#1B2632;   /* gunmetal ink — headings */
+  --blue:#C5362C;   /* Pro Steel red — primary */
+  --blue2:#E24A35;  /* lighter red */
+  --grey:#5B6470;   /* body */
+  --gold1:#93A0AE;  /* molten amber accent */
+  --gold2:#54616F;  /* bronze accent */
+  --bg:#EEF1F4;     /* steel-mist band */
+  --line:#E4E8EE;
+  --ink:#141C26;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.gold{background:linear-gradient(120deg,var(--gold1),var(--gold2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;color:#5E6B79;text-transform:uppercase}
+h1,h2{color:var(--navy);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+h2{font-size:clamp(28px,3.4vw,44px)}
+p{color:var(--grey)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;border-radius:10px;padding:15px 24px;cursor:pointer;transition:.2s;border:none}
+.btn-blue{background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 10px 24px -6px rgba(197,54,44,.42)}
+.btn-blue:hover{transform:translateY(-2px);box-shadow:0 14px 30px -6px rgba(197,54,44,.52)}
+.btn-gold{background:linear-gradient(120deg,#EDF0F4,#8593A2);color:#1B2632;box-shadow:0 12px 30px -6px rgba(80,95,112,.42)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--blue)}
+.link .c{font-size:1.3em;line-height:0}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 40px;max-width:1360px;margin:0 auto}
+.logo img{height:54px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a:not(.pill):not(.callbtn){font-weight:500;font-size:16px;color:#4a525e}
+.nav-links a:not(.pill):not(.callbtn):hover{color:var(--navy)}
+.pill{background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff!important;border-radius:999px;padding:11px 22px;font-weight:700;font-size:15px;box-shadow:0 8px 18px -4px rgba(197,54,44,.4)}
+.callbtn{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:15px;white-space:nowrap;background:linear-gradient(120deg,#EDF0F4,#8B98A6);color:#1B2632;border:1px solid rgba(150,162,175,.55);border-radius:999px;padding:10px 18px;box-shadow:0 6px 16px -5px rgba(80,95,112,.42);transition:.2s}
+.callbtn:hover{transform:translateY(-1px)}
+.menu-btn{display:none}
+/* hero */
+.hero{background:linear-gradient(100deg,#E7ECF2 0%,#fff 58%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding:84px 0}
+.hero h1{font-size:clamp(38px,4.9vw,60px)}
+.hero p.sub{font-size:19px;margin:22px 0;max-width:540px}
+.hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.trust{display:flex;align-items:center;gap:9px;margin-top:24px;color:var(--grey);font-size:14px;font-weight:600}
+.trust svg{flex:0 0 auto}
+.hero-visual{position:relative}
+.hero-visual img{width:100%;border-radius:14px;box-shadow:0 28px 60px -16px rgba(13,30,50,.4);aspect-ratio:4/3.2;object-fit:cover}
+.badge{position:absolute;left:-16px;bottom:30px;background:linear-gradient(135deg,#E3E8ED,#8B98A6);border-radius:16px;padding:15px 22px;box-shadow:0 16px 34px -8px rgba(80,95,112,.5)}
+.badge b{display:block;font-size:26px;color:#1B2632;font-weight:800;letter-spacing:-.02em}
+.badge span{font-size:12.5px;color:#3B4654;font-weight:600}
+/* stats */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.stats-row{display:flex;justify-content:space-between;align-items:center;padding:40px 0;text-align:center;flex-wrap:wrap;gap:24px}
+.stat{flex:1;min-width:160px}
+.stat b{display:block;font-size:40px;font-weight:800;letter-spacing:-.02em}
+.stat span{font-size:14px;color:var(--grey);font-weight:600}
+.stat+.stat{border-left:1px solid var(--line)}
+section.sec{padding:88px 0}
+.sec-head{text-align:center;max-width:740px;margin:0 auto 44px}
+.sec-head h2{margin-top:12px}
+.sec-head p{margin-top:14px;font-size:17px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:#fff;border:1px solid #EDF1F6;border-radius:20px;overflow:hidden;box-shadow:0 18px 40px -14px rgba(13,40,80,.14);display:flex;flex-direction:column}
+.card img{height:260px;width:100%;object-fit:cover}
+.card .body{padding:28px 32px 30px}
+.card .body h3{color:var(--navy);font-size:25px;font-weight:800;letter-spacing:-.01em;margin:10px 0}
+.card .body p{font-size:15px;margin-bottom:14px}
+/* money band */
+.adu{background:var(--bg)}
+.adu-grid{display:grid;grid-template-columns:520px 1fr;gap:60px;align-items:center;padding:88px 0}
+.adu-grid img{width:100%;border-radius:20px;box-shadow:0 24px 50px -12px rgba(10,25,45,.32);aspect-ratio:4/3.4;object-fit:cover}
+.adu h2{margin:14px 0}
+.adu .lead{font-size:17px;margin-bottom:18px}
+.checks{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px}
+.checks li{display:flex;gap:11px;align-items:flex-start;color:var(--navy);font-weight:600;font-size:15.5px}
+.checks li::before{content:"✓";font-weight:800;color:var(--blue);margin-top:1px}
+/* features */
+.feat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.feat .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#FBEDE9,#F6DCD4);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feat .ic svg{width:24px;height:24px;color:var(--blue)}
+.feat h3{color:var(--navy);font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:9px}
+.feat p{font-size:14.5px}
+/* services */
+.svc-bg{background:#F6F8FA}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.svc{background:#fff;border:1px solid #EAEEF2;border-radius:18px;padding:32px 30px;box-shadow:0 10px 28px -10px rgba(13,40,80,.09)}
+.svc .ic{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,#1B2632,#2E3D4E);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.svc .ic svg{width:22px;height:22px;color:#C7D0DA}
+.svc h3{color:var(--navy);font-size:21px;font-weight:700;margin:6px 0 10px}
+.svc p{font-size:15px;margin-bottom:14px}
+/* credential strip */
+.creds{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 30px;display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;justify-content:center;box-shadow:0 12px 30px -16px rgba(13,40,80,.12)}
+.chip{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14.5px;color:var(--navy)}
+.chip svg{width:22px;height:22px;color:var(--blue);flex:0 0 auto}
+.chip+.chip{padding-left:30px;border-left:1px solid var(--line)}
+/* portfolio */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:36px}
+.tile{display:block}
+.tile img{width:100%;height:300px;object-fit:cover;border-radius:16px;box-shadow:0 14px 32px -10px rgba(13,40,80,.18)}
+.tile .t{font-size:12px;font-weight:700;letter-spacing:.16em;color:#5E6B79;text-transform:uppercase;margin-top:15px}
+.tile .n{font-size:18px;font-weight:700;color:var(--navy)}
+.center{text-align:center}
+/* instagram band */
+.ig{background:linear-gradient(120deg,#1B2632,#2C3B4D);color:#fff;border-radius:0}
+.ig-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:74px 0}
+.ig h2{color:#fff}
+.ig p{color:#C3CDD8;font-size:17px;margin:14px 0 26px;max-width:480px}
+.ig .row{display:flex;gap:14px;flex-wrap:wrap}
+.igbtn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;color:#fff;border-radius:12px;padding:14px 22px;background:linear-gradient(120deg,#F58529,#DD2A7B,#8134AF);box-shadow:0 12px 30px -8px rgba(221,42,123,.5);transition:.2s}
+.igbtn:hover{transform:translateY(-2px)}
+.ig-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ig-thumbs img{width:100%;height:170px;object-fit:cover;border-radius:12px;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+/* cta */
+.cta{background:linear-gradient(115deg,#161F2A,#33455A);text-align:center;padding:100px 0;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--gold1))}
+.cta h2{color:#fff;max-width:800px;margin:0 auto}
+.cta p{color:#C3CDD8;max-width:600px;margin:16px auto 28px;font-size:18px}
+.cta small{display:block;margin-top:18px;color:#C3CDD8;font-weight:600;font-size:15px}
+.cta small a{color:#fff}
+/* footer */
+footer{background:#121A24;color:#AEBBC8;padding:62px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:54px}
+.foot .bm{font-size:23px;font-weight:800;letter-spacing:.01em;margin-bottom:12px}
+.foot .bm .y{color:#E24A35}.foot .bm .w{color:#fff}
+.foot p{color:#AEBBC8;font-size:14px;line-height:1.65;max-width:300px}
+.foot h4{color:#9FB0BE;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.foot ul a,.foot ul li{font-size:14px;color:#AEBBC8}.foot ul a:hover{color:#fff}
+.social{display:flex;gap:12px;margin-top:18px}
+.social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:.2s}
+.social a:hover{background:var(--blue)}
+.social svg{width:18px;height:18px;color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);margin-top:42px;padding-top:24px;font-size:13px;flex-wrap:wrap;gap:10px}
+.mobilecall{display:none}
+@media(max-width:900px){
+  .menu-btn{display:block;font-size:26px;background:none;border:none;color:var(--navy);cursor:pointer;line-height:1}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 26px -12px rgba(13,40,80,.2);padding:6px 22px 18px}
+  .nav-links.open a{padding:14px 2px;font-size:17px;color:var(--navy);border-bottom:1px solid var(--line)}
+  .nav-links.open a.callbtn,.nav-links.open a.pill{display:block;text-align:center;margin-top:12px;border-bottom:none}
+  .callbtn{display:none}
+  .hero-grid,.adu-grid,.ig-grid{grid-template-columns:1fr;gap:38px}.adu-grid img{max-width:520px}
+  .two,.three,.tiles,.feat-row{grid-template-columns:1fr}
+  .feat-row{gap:30px}.stat+.stat{border-left:none}
+  .chip+.chip{padding-left:0;border-left:none}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}.wrap{padding:0 22px}.nav{padding:10px 22px}
+  section.sec,.hero-grid,.adu-grid{padding-top:58px;padding-bottom:58px}
+  .mobilecall{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;box-shadow:0 -4px 16px rgba(0,0,0,.14)}
+  .mobilecall a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-weight:700;font-size:16px}
+  .mobilecall .call{background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff}
+  .mobilecall .book{background:linear-gradient(120deg,#EDF0F4,#8593A2);color:#1B2632}
+  body{padding-bottom:56px}
+}
+</style>
+</head>
+<body>
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><img src="https://prosteelservices.com/wp-content/uploads/2025/02/WhatsApp_Image_2025-09-26_at_09.26.41_cdb6fc74-removebg-preview-e1758858914416.png" alt="Pro Steel Services"></a>
+    <nav class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="callbtn" href="tel:19172546604"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-5 21c-.83 0-1.5-.67-1.5-1.5S11.17 19 12 19s1.5.67 1.5 1.5S12.83 22 12 22zm5-4H7V4h10v14z"/></svg> Call (917) 254-6604</a>
+      <a class="pill" href="contact.html">Request a Bid</a>
+    </nav>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Structural Steel · Fabrication &amp; Erection · Brooklyn, NY</div>
+      <h1 style="margin-top:14px">We fabricate &amp; erect the steel that builds <span class="gold">New York</span>.</h1>
+      <p class="sub">From the foundation up — structural and miscellaneous steel for commercial projects across all five boroughs and the tri-state. Built to beat the schedule, with AISC-grade quality and a safety-first crew.</p>
+      <div class="hero-cta">
+        <a class="btn btn-blue" href="contact.html">Request a Bid <span>&rarr;</span></a>
+        <a class="link" href="projects.html">See our work <span class="c">&rsaquo;</span></a>
+      </div>
+      <div class="trust">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E6B79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        60+ years combined experience · AISC member · All 5 boroughs + NJ
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0116.jpg" alt="Structural steel frame erected by Pro Steel Services in New York City">
+      <div class="badge"><b>80 men · 3 cranes</b><span>On a single jobsite</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAR ============ -->
+<div class="stats">
+  <div class="wrap stats-row">
+    <div class="stat"><b class="gold">60+</b><span>Years Combined Experience</span></div>
+    <div class="stat"><b class="gold">$13M</b><span>Largest Project Delivered</span></div>
+    <div class="stat"><b class="gold">5</b><span>Boroughs + Tri-State</span></div>
+    <div class="stat"><b class="gold">AISC</b><span>Member Fabricator</span></div>
+  </div>
+</div>
+
+<!-- ============ SPLIT CARDS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">What We Do</div><h2>One partner, <span class="gold">concept to topping out</span></h2><p>We self-perform the work that decides your schedule — shop fabrication and field erection — so the steel package isn't where your project slips.</p></div>
+    <div class="two">
+      <div class="card">
+        <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0902-scaled.jpg" alt="Structural steel fabrication">
+        <div class="body">
+          <div class="eyebrow">Shop</div>
+          <h3>Structural Steel Fabrication</h3>
+          <p>Beams, columns, and connections cut, drilled, and welded on CNC lines for tight tolerances and shorter lead times. AWS-certified welders; CWI and QC inspection at every stage.</p>
+          <a class="link" href="services.html#fabrication">Fabrication details <span class="c">&rsaquo;</span></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0192.jpg" alt="Steel erection and installation">
+        <div class="body">
+          <div class="eyebrow">Field</div>
+          <h3>Steel Erection &amp; Installation</h3>
+          <p>Experienced crews and crane capacity to raise your frame safely, on schedule, and to spec — up to 3 crawler cranes and 80 men on a single site. OSHA &amp; NYC SST compliant.</p>
+          <a class="link" href="services.html#erection">Erection details <span class="c">&rsaquo;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MONEY BAND: Design-Build / Preconstruction ============ -->
+<section class="adu">
+  <div class="wrap adu-grid">
+    <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0164.jpg" alt="Design-build steel preconstruction">
+    <div>
+      <div class="eyebrow">Design-Build &amp; Preconstruction</div>
+      <h2>Engineer the savings <span class="gold">before the first beam ships</span></h2>
+      <p class="lead">Bring us in early and our engineering team works hand-in-hand with your Architect and Engineer of Record — taking cost and risk out of the steel package before fabrication starts.</p>
+      <ul class="checks">
+        <li>BIM coordination &amp; clash-free shop drawings for every trade</li>
+        <li>Design-Assist, Design-Build &amp; Value Engineering (VE)</li>
+        <li>In-house connection design led by a licensed P.E. (30+ yrs)</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn btn-blue" href="contact.html">Start your project <span>&rarr;</span></a>
+        <a class="link" href="services.html">All services <span class="c">&rsaquo;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Why Pro Steel</div><h2>Built to <span class="gold">beat the schedule</span></h2></div>
+    <div class="feat-row">
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Beat the Schedule</h3>
+        <p>In-house logistics and CNC fabrication compress lead times and keep deliveries on rhythm with the field. One objective: beat the schedule.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/></svg></div>
+        <h3>Safety-First, Low EMR</h3>
+        <p>OSHA and NYC Site Safety Training (SST) compliant crews. Safety and constructability are designed into every lift — not bolted on after.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>AISC-Grade Quality</h3>
+        <p>AISC member fabricator. Certified Welding Inspectors and full-time QC inspect product at every stage; all welders certified to AWS standards.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/></svg></div>
+        <h3>One Accountable Contact</h3>
+        <p>A dedicated project manager owns coordination, deliveries, and the field — so you have one number to call and one team responsible for the package.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES (secondary) ============ -->
+<section class="sec svc-bg">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Full Scope</div><h2>Everything the steel package <span class="gold">needs</span></h2></div>
+    <div class="three">
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10M4 10l8-6 8 6M4 10h16v11M9 21v-6h6v6"/></svg></div>
+        <h3>Miscellaneous Metals</h3>
+        <p>Stairs, railings, platforms, ladders, embeds, and ornamental packages — tailored to your project and detailed to fit the first time.</p>
+        <a class="link" href="services.html#misc">Learn more <span class="c">&rsaquo;</span></a>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>BIM &amp; Shop Drawings</h3>
+        <p>Building Information Modeling and detailing that put accurate, coordinated information in every stakeholder's hands — faster turnaround, fewer surprises.</p>
+        <a class="link" href="services.html#bim">Learn more <span class="c">&rsaquo;</span></a>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>Project Management</h3>
+        <p>One dedicated contact, constant communication, and full coordination of deliveries, drawings, and on-site personnel from kickoff to close-out.</p>
+        <a class="link" href="services.html#pm">Learn more <span class="c">&rsaquo;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS STRIP ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="creds">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg> AISC Member Fabricator</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/></svg> OSHA &amp; NYC SST Compliant</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Licensed &amp; Insured</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg> AWS-Certified Welders</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO STRIP ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Recent Work</div><h2>Steel in <span class="gold">the field</span></h2></div>
+    <div class="tiles">
+      <a class="tile" href="projects.html"><img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0908-scaled.jpg" alt="Commercial steel frame erection"><div class="t">Erection</div><div class="n">Commercial Frame</div></a>
+      <a class="tile" href="projects.html"><img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0926-scaled.jpg" alt="Steel connections and detailing"><div class="t">Fabrication</div><div class="n">Connections &amp; Detail</div></a>
+      <a class="tile" href="projects.html"><img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_1007-scaled.jpg" alt="Crane lift on a steel jobsite"><div class="t">Field</div><div class="n">Crane Lift</div></a>
+    </div>
+    <div class="center"><a class="btn btn-blue" href="projects.html">View all projects <span>&rarr;</span></a></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM BAND ============ -->
+<section class="ig">
+  <div class="wrap ig-grid">
+    <div>
+      <div class="eyebrow" style="color:#B9C4CF">@prosteelservices</div>
+      <h2 style="margin-top:10px">See Pro Steel <span class="gold">in action</span></h2>
+      <p>Follow the build — crane lifts, shop fabrication, and finished frames from jobsites across NYC and the tri-state.</p>
+      <div class="row">
+        <a class="igbtn" href="https://www.instagram.com/prosteelservices/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.9.07s-3.63 0-4.9-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1018.75 12 6.75 6.75 0 0012 5.25zm0 11.13A4.38 4.38 0 1116.38 12 4.38 4.38 0 0112 16.38zm6.96-11.4a1.58 1.58 0 11-1.57-1.58 1.58 1.58 0 011.57 1.58z"/></svg>
+          Follow on Instagram
+        </a>
+        <a class="btn btn-ghost" href="https://youtu.be/6NyZEdGL9uw" target="_blank" rel="noopener">Watch our video <span>&rarr;</span></a>
+      </div>
+    </div>
+    <div class="ig-thumbs">
+      <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_1011-scaled.jpg" alt="Pro Steel jobsite">
+      <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0048.jpg" alt="Pro Steel steel delivery">
+      <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_0721-rotated.jpg" alt="Pro Steel structural framing">
+      <img src="https://prosteelservices.com/wp-content/uploads/2025/03/IMG_1046-1-scaled.jpg" alt="Pro Steel erection crew">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow gold">Let's Build</div>
+    <h2 style="margin-top:10px">Put a real steel partner <span class="gold">on your next job</span></h2>
+    <p>Send us the drawings and we'll get you a competitive, buildable bid — fast.</p>
+    <a class="btn btn-gold" href="contact.html">Request a Bid <span>&rarr;</span></a>
+    <small>or call <a href="tel:19172546604">(917) 254-6604</a></small>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot">
+        <div class="bm"><span class="y">PRO</span> <span class="w">STEEL</span></div>
+        <p>Brooklyn-based structural steel fabricator and erector. Design, fabrication, and erection of structural and miscellaneous steel across NYC and the tri-state.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/prosteelservices/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.9.07s-3.63 0-4.9-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1018.75 12 6.75 6.75 0 0012 5.25zm0 11.13A4.38 4.38 0 1116.38 12 4.38 4.38 0 0112 16.38zm6.96-11.4a1.58 1.58 0 11-1.57-1.58 1.58 1.58 0 011.57 1.58z"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.64 4.76 6.08V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg></a>
+          <a href="https://youtu.be/6NyZEdGL9uw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.77-1.77C19.3 5.3 12 5.3 12 5.3s-7.3 0-8.83.43A2.5 2.5 0 001.4 7.5C1 9 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.77 1.77C4.7 18.7 12 18.7 12 18.7s7.3 0 8.83-.43a2.5 2.5 0 001.77-1.77C23 15.2 23 12 23 12zM9.75 15.5v-7l6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot"><h4>Company</h4><ul><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="foot"><h4>Services</h4><ul><li><a href="services.html#fabrication">Fabrication</a></li><li><a href="services.html#erection">Erection &amp; Installation</a></li><li><a href="services.html#bim">BIM &amp; Detailing</a></li><li><a href="services.html#pm">Project Management</a></li></ul></div>
+      <div class="foot"><h4>Get in Touch</h4><ul><li><a href="tel:19172546604">(917) 254-6604</a></li><li><a href="tel:13472940780">(347) 294-0780</a></li><li>Brooklyn, NY 11220</li><li>Rutherford, NJ 07070</li><li>Serving all 5 boroughs + tri-state</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>AISC Member · OSHA &amp; NYC SST Compliant · Licensed &amp; Insured</span><span>© 2026 Pro Steel Services LLC. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CALL BAR ============ -->
+<div class="mobilecall"><a class="call" href="tel:19172546604">&#9742; Call Now</a><a class="book" href="contact.html">Request a Bid</a></div>
+</body>
+</html>
